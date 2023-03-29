@@ -7,6 +7,7 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Services\FileService;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\AllPostsCollection;
 
 class PostController extends Controller
 {

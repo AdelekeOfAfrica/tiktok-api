@@ -5,6 +5,7 @@ namespace App\Http\Controllers\api;
 use Exception;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Services\FileService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserCollection;
 
@@ -35,7 +36,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function updateUserImage(string $id)
+    public function updateUserImage(Request $request)
     {
         //
         $request->validate(['image' => 'required|mimes:jpeg,jpg,png']);
